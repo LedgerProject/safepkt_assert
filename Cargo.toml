@@ -1,0 +1,12 @@
+[package]
+name = "safepkt_assert"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+verification-annotations = { git="https://github.com/thierrymarianne/contrib-rust-verification-tools.git", rev="e2f3c5c65a77", features = ["verifier-klee"], optional = true }
+
+[features]
+verifier-klee = ["verification-annotations"]
